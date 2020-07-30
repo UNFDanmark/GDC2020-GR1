@@ -1,29 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collection;
+using System.Collection.Generic;
 using UnityEngine;
 
-public class Pointsystem : MonoBehaviour
+public class DestroyByContact : Monobehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject explosion;
+    public GameObject playerExplosion;
+    public int scoreValue;
+    public GUIText scoreText;
+    private int score;
+    private GameController gameController;
 
-    }
-void OnCollisionEnter()
-{
-    if(groundstouched == 0)
+    void start()
     {
-        Destroy(GameObject)
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent <GameController>();
+        }
+        if (gameController == null)
+        {
+            Debug.Log ("Cannot find 'GameController' scripts")
+        }
+        score = 0;
+        UpdateScore();
     }
+
+public void AddScore (int newScoreValue)
+{
+    score += newScoreValue;
+    UpdateScore();
 }
 
-    // Update is called once per frame
-    void Update()
+void UpdateScore()
+{
+    scoreText.text = "Score: " + score;
+}
+
+void OnTriggerEnter(Collider other)
+{
+    if(other.tag == "Boundary")
     {
-    public int points = 0
-    if(Destroy(GameObject) == True);
-    {
-        Console.WriteLine("Score: " + points)
-        points++;
+        return;
     }
+    gameController.AddScore (scoreValue);
+    Destroy(other.GameObject);
+    Destroy(GameObject);
+}
 }
