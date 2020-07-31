@@ -1,0 +1,16 @@
+Beskrivelse af spillet feline fatality lavet af gruppe 1 GDC 2020
+
+I spillet er spilleren en kat på et værelse på et plejecenter, katten er sur og vil gerne ødelægge alting.
+Det gør man ved at styre katten i et first person perpsektive. Hver gang et objekt rammer gulvet får man point
+og så handler spillet om man skal få flest point på 2 minutter
+
+Controls
+move and turn 
+W, A, S, D 
+
+Jump/ double jumpe:
+space
+
+Paw slap:
+e
+
