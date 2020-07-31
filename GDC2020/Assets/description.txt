@@ -1,0 +1,13 @@
+Nu er en kat der gerne vil ødelægge værelset på et plejecenter. 
+Du spiller katten fra et first person perspective, når et object rammer gulvet får man et point
+Det gælder om at få flest point på 2 minutter
+
+Controls
+Move and turn: 
+WASD
+
+Jump / double jump
+SPACE
+
+Paw slap
+e
